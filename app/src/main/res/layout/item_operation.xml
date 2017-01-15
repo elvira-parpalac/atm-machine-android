@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlStatistics"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:fontFamily="roboto-medium"
+    android:background="@drawable/item_border"
+    android:layout_marginBottom="5dp">
+
+    <TextView
+        android:id="@+id/tvOperationNumber"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:background="@color/colorBtn"
+        android:gravity="center"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvOperationDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@+id/tvOperationNumber"
+        android:gravity="center"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tvOperationName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvOperationDate"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/tvOperationNumber"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvOperationMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tvOperationDate"
+        android:textColor="@color/colorYellow"
+        android:textSize="18sp"
+        android:layout_marginRight="30dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imgMoney"
+        android:background="@drawable/operation"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/tvOperationDate" />
+
+    <TextView
+        android:id="@+id/tvOperationBalanceTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvOperationName"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/tvOperationNumber"
+        android:gravity="center"
+        android:text="@string/str_AccBalance"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tvOperationBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvOperationName"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/tvOperationBalanceTxt"
+        android:gravity="center"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/imgBalance"
+        android:background="@drawable/diamond"
+        android:layout_width="16dp"
+        android:layout_marginTop="5dp"
+        android:layout_height="10dp"
+        android:layout_marginLeft="3dp"
+        android:layout_toRightOf="@+id/tvOperationBalance"
+        android:layout_below="@+id/tvOperationMoney" />
+
+</RelativeLayout>

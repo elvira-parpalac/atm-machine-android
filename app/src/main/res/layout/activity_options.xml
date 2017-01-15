@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tablelayout"
+    android:fontFamily="roboto-medium"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:weightSum="1.0"
+    android:padding="8dp"
+    android:stretchColumns="*">
+
+    <TableRow
+        android:layout_width="0dp"
+        android:gravity="center_horizontal">
+
+        <LinearLayout
+            android:id="@+id/checkLayout"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:background="@drawable/button_selector"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical"
+            android:weightSum="1.0">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.7"
+                android:src="@drawable/check"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:textColor="@color/colorName"
+                android:textSize="18sp"
+                android:background="@color/colorBtn"
+                android:textAlignment="center"
+                android:fontFamily="roboto-medium"
+                android:text="@string/str_Check"
+                android:id="@+id/checkTxt"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rechargeLayout"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_selector"
+            android:orientation="vertical"
+            android:weightSum="1.0">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.7"
+                android:src="@drawable/recharge"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/colorBtn"
+                android:layout_weight="0.3"
+                android:textAlignment="center"
+                android:fontFamily="roboto-medium"
+                android:textSize="18sp"
+                android:textColor="@color/colorName"
+                android:gravity="center"
+                android:text="@string/btn_recharge"
+                android:id="@+id/rechargeTxt"/>
+        </LinearLayout>
+
+    </TableRow>
+
+    <TableRow
+
+        android:layout_width="0dp"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/withdrawLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_selector"
+            android:orientation="vertical"
+            android:weightSum="1.0">
+
+            <ImageView
+                android:id="@+id/imgWithdraw"
+                android:layout_width="200dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.7"
+                android:src="@drawable/withdraw"
+                android:scaleType="fitCenter"
+                android:cropToPadding="false"
+                android:adjustViewBounds="false" />
+
+            <TextView
+                android:background="@color/colorBtn"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:textColor="@color/colorName"
+                android:fontFamily="roboto-medium"
+                android:text="@string/str_Withdraw"
+                android:textSize="18sp"
+                android:id="@+id/withdrawTxt"/>
+
+        </LinearLayout>
+
+    </TableRow>
+
+</TableLayout>

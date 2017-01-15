@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.lira.atm">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+
+    <application
+        android:icon="@drawable/logo2"
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name="com.example.lira.atm.activities.SplashActivity"  android:label="@string/app_name" android:screenOrientation="portrait" android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.example.lira.atm.activities.CheckActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.lira.atm.activities.MoneyActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.lira.atm.activities.OptionActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.lira.atm.activities.RechargeActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.lira.atm.activities.WithdrawActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+
+    </application>
+
+</manifest>

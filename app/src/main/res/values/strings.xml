@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">ATM Machine</string>
+    <string name="splash_fragment">Splash fragment</string>
+    <string name="str_Check">Check</string>
+    <string name="str_Recharge">Recharge</string>
+    <string name="str_Withdraw">Withdraw</string>
+    <string name="str_AccBalance">Balance: </string>
+    <string name="str_Choose">Choose denominations</string>
+    <string name="btn_Go_back">Back to menu</string>
+    <string name="btn_recharge">Recharge</string>
+    <string name="btn_withdraw">Withdraw</string>
+    <string name="txt_enterMoney">Recharge account</string>
+    <string name="txt_enterAmount">Enter the amount</string>
+    <string name="btn_submit">Submit</string>
+    <string name="about">About</string>
+    <string name="txt_chart">The chart shows the dynamic of changes in the amount of money in your balance.</string>
+    <string name="str_statistics">Detailed Statistics</string>
+    <string name="txt_transactions">Here you can see detailed information about all transactions.</string>
+    <string name="txt_scroll_to_top">Scroll to top</string>
+    <string name="str_amount">Enter the amount and press button Recharge. Your balance will increase when the operation is confirmed.</string>
+    <string name="str_history">History of Recharge Operations you will see in the Check option after pressing button Recharge.</string>
+    <string name="str_default">You can withdraw money using default denominations and numbers of each or you can choose what you want.</string>
+    <string name="str_amount_withdraw">Enter the amount of money you want to withdraw and press button Submit.</string>
+    <string name="str_next_step">In the next step you will be able to choose denominations and number of banknotes.</string>
+    <string name="_0">0</string>
+    <string name="multiply">x</string>
+</resources>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fontFamily="roboto-medium"
+    android:padding="8dp"
+
+    android:id="@+id/withdrawMoneyLayout">
+
+    <TextView
+        android:text="@string/btn_withdraw"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorName"
+        android:textSize="33sp"/>
+    <TextView
+        android:gravity="fill_horizontal"
+        android:text="@string/str_amount_withdraw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="3dp"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/userMoneyBox"
+        android:maxLength="6"
+        android:layout_width="match_parent"
+        android:background="@android:color/transparent"
+        android:cursorVisible="true"
+        android:hint="@string/txt_enterAmount"
+        android:textColorHint="@color/colorYellowTr"
+        android:textAlignment="center"
+        android:inputType="number"
+        android:textSize="35sp"
+        android:textColor="@color/colorYellow"
+        android:layout_weight="2"
+        android:layout_height="0dp"/>
+
+    <TextView
+        android:gravity="fill_horizontal"
+        android:text="@string/str_next_step"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="3dp"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:text="@string/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/colorName"
+        android:background="@drawable/general_btn_style" />
+
+</LinearLayout>
