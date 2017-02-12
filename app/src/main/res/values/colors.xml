@@ -2,13 +2,11 @@
 <resources>
     <color name="colorPrimary">#ffffff</color>
     <color name="colorPrimaryDark">#20000000</color>
-    <color name="colorAccent">#FF4081</color>
     <color name="colorName">#00d7b6</color>
     <color name="colorBtn">#2000d7b6</color>
     <color name="colorApp">#263238</color>
     <color name="colorCheck">#FFCA28</color>
-    <color name="colorRecharge">#43A047</color>
-    <color name="colorWithdraw">#D32F2F</color>
     <color name="colorYellow">#ffff00</color>
     <color name="colorYellowTr">#20ffff00</color>
+    <color name="chart_description">#20263238</color>
 </resources>

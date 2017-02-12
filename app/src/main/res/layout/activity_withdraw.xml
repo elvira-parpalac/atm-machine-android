@@ -72,7 +72,7 @@
                 android:weightSum="2">
 
                 <Button
-                    android:id="@+id/btnGoBack"
+                    android:id="@+id/btnGoTop"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -90,9 +90,9 @@
                     android:background="@drawable/general_btn_style"
                     android:text="@string/btn_withdraw"
                     android:textColor="@color/colorName" />
-                <!--android:layout_toRightOf="@+id/btnGoBack"-->
 
             </LinearLayout>
+
         </LinearLayout>
 
     </ScrollView>

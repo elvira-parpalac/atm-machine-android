@@ -27,8 +27,13 @@ import java.util.ArrayList;
 
 public class CheckActivity extends Activity {
 
-    Button btnGoBack;
-    TextView accBalance, tvOperationNumber, tvOperationDate, tvOperationName, tvOperationBalance, tvOperationMoney;
+    Button btnGoTop;
+    TextView accBalance;
+    TextView tvOperationNumber;
+    TextView tvOperationDate;
+    TextView tvOperationName;
+    TextView tvOperationBalance;
+    TextView tvOperationMoney;
 
     LinearLayout rlStatistics;
     ArrayList<Operation> operations;
@@ -51,7 +56,7 @@ public class CheckActivity extends Activity {
 
         this.inflater = getLayoutInflater();
 
-        btnGoBack = (Button) findViewById(R.id.btnGoBack);
+        btnGoTop = (Button) findViewById(R.id.btnGoTop);
         accBalance = (TextView) findViewById(R.id.accBalance);
         rlStatistics = (LinearLayout) findViewById(R.id.rlStatistics);
         mainScrollView = ((ScrollView) findViewById(R.id.scrollChart));
@@ -72,9 +77,9 @@ public class CheckActivity extends Activity {
             entries.add(new Entry(operations.get(i).balance, i));
         }
 
-        LineDataSet dataset = new LineDataSet(entries, "Balance");
+        LineDataSet dataset = new LineDataSet(entries, getString(R.string.balance));
         dataset.setColor(Color.rgb(0, 215, 182));
-        dataset.setCircleColor(R.color.colorName);
+        dataset.setCircleColor(Color.rgb(0, 215, 182));
         dataset.setLineWidth(2f);
         dataset.setDrawCircleHole(true);
         dataset.setValueTextSize(15);
@@ -93,9 +98,9 @@ public class CheckActivity extends Activity {
         lineChart.animateY(3000, Easing.EasingOption.EaseInOutCubic);
         lineChart.setDragEnabled(true);
         lineChart.setScaleEnabled(true);
-        lineChart.setDescription("Balance Line Chart");
+        lineChart.setDescription(getString(R.string.balance_chart));
         lineChart.setDescriptionTextSize(14f);
-        lineChart.setNoDataTextDescription("You need to provide data for the chart.");
+        lineChart.setNoDataTextDescription(getString(R.string.chart_no_data));
         lineChart.setDescriptionColor(Color.rgb(38, 50, 56));
         lineChart.setPinchZoom(true);
         lineChart.setVisibleXRangeMaximum(5);
@@ -126,7 +131,7 @@ public class CheckActivity extends Activity {
         // statistics
         renderOperationList();
 
-        btnGoBack.setOnClickListener(view1 -> {
+        btnGoTop.setOnClickListener(view1 -> {
             // scroll to top
             mainScrollView.fullScroll(ScrollView.FOCUS_UP);
         });
@@ -143,7 +148,11 @@ public class CheckActivity extends Activity {
             operationList.add(operations.get(i));
         }
 
-        String sDate, sBalance, sName, sNumb;
+        String sDate;
+        String sBalance;
+        String sName;
+        String sNumb;
+
         int number = 0;
         int opSize = operationList.size();
 

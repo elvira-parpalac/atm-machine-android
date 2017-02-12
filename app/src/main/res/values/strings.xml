@@ -24,4 +24,15 @@
     <string name="str_next_step">In the next step you will be able to choose denominations and number of banknotes.</string>
     <string name="_0">0</string>
     <string name="multiply">x</string>
+    <string name="balance">Balance</string>
+    <string name="balance_chart">Balance Line Chart</string>
+    <string name="chart_no_data">You need to provide data for the chart.</string>
+    <string name="error_withdraw_money">You don\'t have enough money!</string>
+    <string name="error_field_empty">The field is empty! Please, enter the amount.</string>
+    <string name="alert_dialog_title">Info</string>
+    <string name="btn_ok">OK</string>
+    <string name="btn_no">NO</string>
+    <string name="txt_exit">Do you really want to exit?</string>
+    <string name="txt_success">You successfully withdraw money!</string>
+
 </resources>

@@ -12,7 +12,9 @@ import com.example.lira.atm.R;
 
 public class OptionActivity extends Activity {
 
-    LinearLayout checkLayer, rechargeLayer, withdrawLayer;
+    LinearLayout checkLayer;
+    LinearLayout rechargeLayer;
+    LinearLayout withdrawLayer;
 
     @Override
     public void onBackPressed() {
@@ -21,13 +23,10 @@ public class OptionActivity extends Activity {
 
     private void openQuitDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(this, R.style.AlertDialogCustom));
-        builder.setTitle("Info");
-        builder.setMessage("You successfully withdraw money!");
-        builder.setPositiveButton("OK", (dialog, which) -> {
-            finish();
-            System.exit(0);
-        });
-        builder.setNegativeButton("NO", (dialog, which) -> dialog.cancel());
+        builder.setTitle(R.string.alert_dialog_title);
+        builder.setMessage(R.string.txt_exit);
+        builder.setPositiveButton(R.string.btn_ok, (dialog, which) -> super.onBackPressed());
+        builder.setNegativeButton(R.string.btn_no, (dialog, which) -> dialog.cancel());
         builder.show();
     }
 

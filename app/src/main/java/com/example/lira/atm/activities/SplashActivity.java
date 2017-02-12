@@ -4,16 +4,18 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.os.Handler;
 import android.widget.TextView;
 
 import com.example.lira.atm.R;
 import com.example.lira.atm.utils.Serialization;
 import com.example.lira.atm.models.Account;
 
-import java.util.Timer;
-import java.util.TimerTask;
 
 public class SplashActivity extends Activity {
+
+    Handler handler;
+    Runnable runnable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,13 +32,23 @@ public class SplashActivity extends Activity {
         Account serializedObject = (Account) Serialization.loadSerializedObject("/sdcard/save_object.bin");
         Account.setInstance(serializedObject);
 
-
-        new Timer().schedule(new TimerTask() {
+        int SPLASH_TIME_OUT = 1500;
+        handler = new Handler();
+        runnable = new Runnable() {
             @Override
             public void run() {
                 startActivity(new Intent(getApplicationContext(), OptionActivity.class));
+                finish();
             }
-        }, 1000);
+        };
 
+        handler.postDelayed(runnable, SPLASH_TIME_OUT);
+
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        handler.removeCallbacks(runnable);
     }
 }

@@ -39,10 +39,10 @@ public class MoneyActivity  extends Activity{
                     intent.putExtra("sum", t);
                     startActivity(intent);
                 } else {
-                    errorDialog("You don't have enough money!");
+                    errorDialog(getString(R.string.error_withdraw_money));
                 }
             }else{
-                errorDialog("The field is empty! Please, enter the amount.");
+                errorDialog(getString(R.string.error_field_empty));
             }
 
         });
@@ -51,11 +51,11 @@ public class MoneyActivity  extends Activity{
 
     private void errorDialog(String m) {
         AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(this, R.style.AlertDialogCustom));
-        builder.setTitle("Info");
 
+        builder.setTitle(R.string.alert_dialog_title);
         builder.setMessage(m);
 
-        builder.setPositiveButton("OK", null);
+        builder.setPositiveButton(R.string.btn_ok, null);
         builder.show();
     }
 

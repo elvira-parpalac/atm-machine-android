@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,7 +24,9 @@ import com.example.lira.atm.R;
 
 public class WithdrawActivity extends Activity {
 
-    Button btnGoBack, btnWithdrawMoney;
+    Button btnGoBack;
+    Button btnWithdrawMoney;
+
     TextView errorTxt;
     LayoutInflater inflater;
     Denominations denominations;
@@ -42,7 +43,7 @@ public class WithdrawActivity extends Activity {
 
         this.inflater = getLayoutInflater();
 
-        btnGoBack = (Button) findViewById(R.id.btnGoBack);
+        btnGoBack = (Button) findViewById(R.id.btnGoTop);
         btnWithdrawMoney = (Button) findViewById(R.id.btnWithdrawMoney);
         errorTxt = (TextView) findViewById(R.id.denominationTxt);
 
@@ -53,13 +54,15 @@ public class WithdrawActivity extends Activity {
         denominations = new Denominations();
         denominations.setSum(userSum);
 
+        //initList
         renderList();
+
 
         btnWithdrawMoney.setEnabled(true);
 
         View.OnClickListener btnClk = v -> {
             switch (v.getId()) {
-                case R.id.btnGoBack:
+                case R.id.btnGoTop:
                     Intent intent = new Intent(getApplicationContext(), OptionActivity.class);
                     startActivity(intent);
                     break;
@@ -69,7 +72,6 @@ public class WithdrawActivity extends Activity {
                     Integer newBalance = oldBalance - userSum;
 
                     Account.getInstance().setMoney(newBalance);
-
                     Account.getInstance().addOperation(Operation.WITHDRAW, userSum, newBalance);
 
                     confirmDialog();
@@ -83,12 +85,12 @@ public class WithdrawActivity extends Activity {
     }
 
     private void confirmDialog() {
-        Intent intent = new Intent(getApplicationContext(), CheckActivity.class);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(this, R.style.AlertDialogCustom));
-        builder.setTitle("Info");
-        builder.setMessage("You successfully withdraw money!");
-        builder.setPositiveButton("OK", (dialog, which) -> {
+        builder.setTitle(R.string.alert_dialog_title);
+        builder.setMessage(R.string.txt_success);
+        builder.setPositiveButton(R.string.btn_ok, (dialog, which) -> {
+            Intent intent = new Intent(getApplicationContext(), CheckActivity.class);
             startActivity(intent);
         });
         builder.show();
